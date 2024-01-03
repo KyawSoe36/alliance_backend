@@ -3,6 +3,9 @@ const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
 const orderRouter = require("./src/routes/order_route.js");
+const cors = require("cors");
+
+app.use(cors());
 app.use(bodyParser.json());
 
 const port = process.env.PORT || 3000;
