@@ -38,8 +38,8 @@ const create = async (order) => {
 
 const deleteOrder = async (id) => {
   try {
-    const contact = await orderRepository.deleteOrder(id);
-    return contact;
+    const order = await orderRepository.deleteOrder(id);
+    return order;
   } catch (error) {
     throw new Error("order deletion error");
   }
